@@ -4,6 +4,6 @@ exports.handler = (event, context, callback) => {
     currentTime.setTimezone("Australia/Sydney");
     callback(null, {
         statusCode: '200',
-        body: 'The time in Melbourne is: ' + currentTime.toString(),
+        body: 'The time in Sydney is: ' + currentTime.toString(),
     });
 };
