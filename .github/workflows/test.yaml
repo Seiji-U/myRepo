@@ -1,0 +1,19 @@
+name: test
+
+on: 
+  workflow_dispatch:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    environment: Dev Branch 1
+    steps:
+      - name: echo
+        env:
+          WEBSITE_APPPOOL: ${{ vars.WEBSITE_APPPOOL }}
+          WEBSITE_NAME: ${{ vars.ORGANIZATION_VAR }}
+          WEBSITE_PARENTSITE: ${{ varsWEBSITE_PARENTSITE }}
+        run: |
+          echo $WEBSITE_APPPOOL
+          echo $WEBSITE_NAME
+          echo $WEBSITE_PARENTSITE
+      
