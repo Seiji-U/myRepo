@@ -2,10 +2,20 @@ name: test
 
 on: 
   workflow_dispatch:
+    inputs:
+      channel:
+        description: 'Deploy Target Channel'
+        required: true
+        type: choice
+        options:
+          - "Dev Branch 1"
+          - "Dev Branch 2"
+          - "Dev Branch 3"
+          - "Dev Branch 4" 
 jobs:
   test:
     runs-on: ubuntu-latest
-    environment: Dev Branch 1
+    environment: ${{ inputs.channel }}
     steps:
       - name: echo
         env:
