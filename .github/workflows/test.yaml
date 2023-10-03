@@ -10,10 +10,10 @@ jobs:
       - name: echo
         env:
           WEBSITE_APPPOOL: ${{ vars.WEBSITE_APPPOOL }}
-          WEBSITE_NAME: ${{ vars.ORGANIZATION_VAR }}
+          WEBSITE_NAME: ${{ vars.WEBSITE_NAME }}
           WEBSITE_PARENTSITE: ${{ vars.WEBSITE_PARENTSITE }}
         run: |
-          echo $WEBSITE_APPPOOL
-          echo $WEBSITE_NAME
-          echo $WEBSITE_PARENTSITE
+          echo "Website AppPool: $WEBSITE_APPPOOL"
+          echo "Website Name: $WEBSITE_NAME"
+          echo "Parent Site: $WEBSITE_PARENTSITE"
       
