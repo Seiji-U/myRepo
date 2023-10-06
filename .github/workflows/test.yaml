@@ -16,12 +16,12 @@ jobs:
   test:
     runs-on: ubuntu-latest
     environment: ${{ inputs.channel }}
+    env:
+      WEBSITE_APPPOOL: ${{ vars.WEBSITE_APPPOOL }}
+      WEBSITE_NAME: ${{ vars.WEBSITE_NAME }}
+      WEBSITE_PARENTSITE: ${{ vars.WEBSITE_PARENTSITE }}
     steps:
       - name: echo
-        env:
-          WEBSITE_APPPOOL: ${{ vars.WEBSITE_APPPOOL }}
-          WEBSITE_NAME: ${{ vars.WEBSITE_NAME }}
-          WEBSITE_PARENTSITE: ${{ vars.WEBSITE_PARENTSITE }}
         run: |
           echo "Website AppPool: $WEBSITE_APPPOOL"
           echo "Website Name: $WEBSITE_NAME"
