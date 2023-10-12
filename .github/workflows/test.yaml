@@ -20,10 +20,12 @@ jobs:
       WEBSITE_APPPOOL: ${{ vars.WEBSITE_APPPOOL }}
       WEBSITE_NAME: ${{ vars.WEBSITE_NAME }}
       WEBSITE_PARENTSITE: ${{ vars.WEBSITE_PARENTSITE }}
+      WEBSITE_BINDING: ${{ vars.WEBSITE_BINDING }}
     steps:
       - name: echo
         run: |
           echo "Website AppPool: $WEBSITE_APPPOOL"
           echo "Website Name: $WEBSITE_NAME"
           echo "Parent Site: $WEBSITE_PARENTSITE"
+          echo "Website Binding: $WEBSITE_BINDING"
       
